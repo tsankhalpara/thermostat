@@ -11,6 +11,12 @@ describe ( "Thermostat", function(){
     });
   });
 
+  describe( "initial power saving mode", function() {
+    it('is on by default', function() {
+      expect(thermostat.powerSaving).toEqual(true);
+    });
+  });
+
   describe("up", function() {
     it("increases temperature by 1", function() {
       thermostat.up();
@@ -19,7 +25,6 @@ describe ( "Thermostat", function(){
     describe("power saving on", function() {
       it("does not allow temperature to more than 25", function() {
         thermostat.temperature = 25;
-        thermostat.powerSaving = true;
         expect(function() {thermostat.up()}).toThrow("Power saving on: Too hot!");
       });
     });
