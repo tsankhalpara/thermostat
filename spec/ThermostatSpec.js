@@ -23,9 +23,16 @@ describe ( "Thermostat", function(){
       expect(thermostat.temperature).toEqual(21);
     });
     describe("power saving on", function() {
-      it("does not allow temperature to more than 25", function() {
+      it("does not allow temperature to be more than 25", function() {
         thermostat.temperature = 25;
         expect(function() {thermostat.up()}).toThrow("Power saving on: Too hot!");
+      });
+    });
+    describe("power saving off", function() {
+      it("does not allow temperature to be more than 32", function() {
+        thermostat.temperature = 32;
+        thermostat.powerSaving = false;
+        expect(function() {thermostat.up()}).toThrow("Too hot!");
       });
     });
 
