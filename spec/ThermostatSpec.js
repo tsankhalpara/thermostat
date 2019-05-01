@@ -70,7 +70,8 @@ describe ( "Thermostat", function(){
       thermostat.temperature = 26;
       expect(thermostat.usage()).toEqual("high-usage");
     });
-
   });
+
+  
 
 });
