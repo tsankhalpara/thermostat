@@ -7,7 +7,13 @@ describe ( "Thermostat", function(){
 
   describe( "initial temperature", function() {
     it('has temperature of 20 degrees', function() {
-      expect(thermostat.temperature).toEqual(20);
+      expect(thermostat.DEFAULT_TEMP).toEqual(20);
+    });
+  });
+
+  describe( "show temperature", function() {
+    it('shows current temperature', function() {
+      expect(thermostat.currentTemperature()).toEqual(thermostat.temperature);
     });
   });
 

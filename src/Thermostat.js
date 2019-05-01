@@ -8,6 +8,10 @@ function Thermostat() {
   this.MED_ENERGY_USAGE_LIMIT = 18;
 };
 
+Thermostat.prototype.currentTemperature = function () {
+  return this.temperature ; 
+};
+
 Thermostat.prototype.up = function () {
   if (this.temperature >= this.powerSaving_MAX_TEMP &&
     this.powerSaving === true) {
