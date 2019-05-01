@@ -72,6 +72,18 @@ describe ( "Thermostat", function(){
     });
   });
 
-  
+  describe("Power saving off", function() {
+    it("turns power saving method off", function() {
+      thermostat.powerSavingOff();
+      expect(thermostat.powerSaving).toEqual(false);
+    });
+  });
 
+  describe("Power saving on", function() {
+    it("turns power saving method on", function() {
+      thermostat.powerSavingOff();
+      thermostat.powerSavingOn();
+      expect(thermostat.powerSaving).toEqual(true);
+    });
+  });
 });

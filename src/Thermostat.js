@@ -9,7 +9,7 @@ function Thermostat() {
 };
 
 Thermostat.prototype.up = function () {
-  if (this.temperature === this.powerSaving_MAX_TEMP &&
+  if (this.temperature >= this.powerSaving_MAX_TEMP &&
     this.powerSaving === true) {
     throw "Power saving on: Too hot!";
   } else if (this.temperature === this.MAX_TEMP && this.powerSaving === false) {
@@ -39,4 +39,13 @@ Thermostat.prototype.usage = function () {
   } else {
     return "high-usage";
   }
+};
+
+Thermostat.prototype.powerSavingOff = function () {
+  this.powerSaving = false;
+};
+
+Thermostat.prototype.powerSavingOn = function () {
+  this.temperature = this.powerSaving_MAX_TEMP;
+  this.powerSaving = true;
 };
