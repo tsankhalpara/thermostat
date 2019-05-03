@@ -9,6 +9,7 @@ $(document).ready(function() {
 
   $('#off').on('mouseup', function() {
     thermostat.powerSavingOff();
+    // document.getElementById('off-button').style.visibility = "visible";
     $('#power-saving-status').text(thermostat.powerSaving);
   });
 
@@ -18,10 +19,13 @@ $(document).ready(function() {
     thermostat.reset();
     $('#temperature').text(thermostat.temperature);
     if(thermostat.usage() === "high-usage") {
+      $('#temperature').css('color', 'red');
       $('#usage-meter').text(thermostat.usage());
     } else if (thermostat.usage() === "medium-usage") {
+      $('#temperature').css('color', 'black');
       $('#usage-meter').text(thermostat.usage());
     } else if (thermostat.usage() === "low-usage") {
+      $('#temperature').css('color', 'green');
       $('#usage-meter').text(thermostat.usage());
     }
   });
@@ -30,10 +34,13 @@ $(document).ready(function() {
     thermostat.up();
     $('#temperature').text(thermostat.temperature);
     if(thermostat.usage() === "high-usage") {
+      $('#temperature').css('color', 'red');
       $('#usage-meter').text(thermostat.usage());
     } else if (thermostat.usage() === "medium-usage") {
+      $('#temperature').css('color', 'black');
       $('#usage-meter').text(thermostat.usage());
     } else if (thermostat.usage() === "low-usage") {
+      $('#temperature').css('color', 'green');
       $('#usage-meter').text(thermostat.usage());
     }
   });
@@ -43,10 +50,13 @@ $(document).ready(function() {
     thermostat.down();
     $('#temperature').text(thermostat.temperature);
     if(thermostat.usage() === "high-usage") {
+      $('#temperature').css('color', 'red');
       $('#usage-meter').text(thermostat.usage());
     } else if (thermostat.usage() === "medium-usage") {
+      $('#temperature').css('color', 'black');
       $('#usage-meter').text(thermostat.usage());
     } else if (thermostat.usage() === "low-usage") {
+      $('#temperature').css('color', 'green');
       $('#usage-meter').text(thermostat.usage());
     }
   });

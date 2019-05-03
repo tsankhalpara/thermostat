@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Thermostat</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Monoton|Poiret+One|Roboto"
      rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -11,19 +13,19 @@
     <script src="jQuery/jquery.min.js"></script>
     <script src="src/interface.js"></script>
     <h1>Thermostat</h1>
-    <h2><span id="temperature">20</span></h2>
-    <button type="button" id="up">UP</button>
-    <button type="button" id="down">DOWN</button>
-    <button type="button" id="reset">RESET</button>
-    <button type="button" id="on">ON</button>
-    <button type="button" id="off">OFF</button>
+    <h2><span id="temperature">20</span>&deg;</h2>
+    <i class="fas fa-arrow-alt-circle-up" id="up"></i>
+    <i class="fas fa-arrow-alt-circle-down" id="down"></i>
+    <i class="fas fa-power-off" id="reset"></i>
+    <i class="fas fa-check-circle" id="on"></i>
+    <i class="fas fa-times-circle" id="off"></i>
     <p>
-      Power saving mode is: <span id="power-saving-status">on</span><br>
+      Power saving: <span id="power-saving-status">on</span><br>
       Usage is: <span id="usage-meter">low-usage</span>
     </p>
     <section>
       <h1>Weather</h1>
-      <h3>Current temperature: <span id="current-temperature">20</span></h3>
+      <h3>Current temperature: <span id="current-temperature">20</span>&deg;</h3>
         <form id="select-city">
           <input id="current-city" type="text" placeholder="Enter a city"></input>
           <input type="submit"></input>
