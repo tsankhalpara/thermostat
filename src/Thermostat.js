@@ -9,7 +9,7 @@ function Thermostat() {
 };
 
 Thermostat.prototype.currentTemperature = function () {
-  return this.temperature ; 
+  return this.temperature ;
 };
 
 Thermostat.prototype.up = function () {
