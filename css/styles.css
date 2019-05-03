@@ -8,7 +8,7 @@ body {
 h1 {
   font-size: 50px;
   font-weight: bold;
-  color: #900C3F;
+  color: #8C294F;
 }
 
 h2 {
@@ -19,7 +19,7 @@ h2 {
 
 p {
   font-size: 30px;
-  color: #900C3F;
+  color: #8C294F;
 }
 
 i {
@@ -27,11 +27,11 @@ i {
   font-size: 30px;
 }
 
-#off-button {
-  visibility: hidden;
-}
-
 section {
   font-size: 30px;
   padding-top: 20px;
+}
+
+form {
+  font-size: 20px;
 }

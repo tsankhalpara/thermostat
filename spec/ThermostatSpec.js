@@ -19,7 +19,7 @@ describe ( "Thermostat", function(){
 
   describe( "initial power saving mode", function() {
     it('is on by default', function() {
-      expect(thermostat.powerSaving).toEqual("on");
+      expect(thermostat.powerSaving).toEqual("On");
     });
   });
 
@@ -37,7 +37,7 @@ describe ( "Thermostat", function(){
     describe("power saving off", function() {
       it("does not allow temperature to be more than 32", function() {
         thermostat.temperature = 32;
-        thermostat.powerSaving = "off";
+        thermostat.powerSaving = "Off";
         expect(function() {thermostat.up()}).toThrow("Too hot!");
       });
     });
@@ -66,22 +66,22 @@ describe ( "Thermostat", function(){
   describe("usage", function() {
     it("shows low-usage when temperature < 18", function() {
       thermostat.temperature = 17;
-      expect(thermostat.usage()).toEqual("low-usage");
+      expect(thermostat.usage()).toEqual("Low");
     });
     it("shows medium-usage when temperature < 25", function() {
       thermostat.temperature = 24;
-      expect(thermostat.usage()).toEqual("medium-usage");
+      expect(thermostat.usage()).toEqual("Medium");
     });
     it("shows high-usage when temperature >= 25", function() {
       thermostat.temperature = 26;
-      expect(thermostat.usage()).toEqual("high-usage");
+      expect(thermostat.usage()).toEqual("High");
     });
   });
 
   describe("Power saving off", function() {
     it("turns power saving method off", function() {
       thermostat.powerSavingOff();
-      expect(thermostat.powerSaving).toEqual("off");
+      expect(thermostat.powerSaving).toEqual("Off");
     });
   });
 
@@ -89,7 +89,7 @@ describe ( "Thermostat", function(){
     it("turns power saving method on", function() {
       thermostat.powerSavingOff();
       thermostat.powerSavingOn();
-      expect(thermostat.powerSaving).toEqual("on");
+      expect(thermostat.powerSaving).toEqual("On");
     });
   });
 });

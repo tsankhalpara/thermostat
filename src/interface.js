@@ -18,14 +18,14 @@ $(document).ready(function() {
   $('#reset').on('mouseup', function() {
     thermostat.reset();
     $('#temperature').text(thermostat.temperature);
-    if(thermostat.usage() === "high-usage") {
-      $('#temperature').css('color', 'red');
+    if(thermostat.usage() === "High") {
+      $('#temperature').css('color', '#900C1E');
       $('#usage-meter').text(thermostat.usage());
-    } else if (thermostat.usage() === "medium-usage") {
+    } else if (thermostat.usage() === "Medium") {
       $('#temperature').css('color', 'black');
       $('#usage-meter').text(thermostat.usage());
-    } else if (thermostat.usage() === "low-usage") {
-      $('#temperature').css('color', 'green');
+    } else if (thermostat.usage() === "Low") {
+      $('#temperature').css('color', '#0C905D');
       $('#usage-meter').text(thermostat.usage());
     }
   });
@@ -33,14 +33,14 @@ $(document).ready(function() {
   $('#up').on('mouseup', function() {
     thermostat.up();
     $('#temperature').text(thermostat.temperature);
-    if(thermostat.usage() === "high-usage") {
-      $('#temperature').css('color', 'red');
+    if(thermostat.usage() === "High") {
+      $('#temperature').css('color', '#900C1E');
       $('#usage-meter').text(thermostat.usage());
-    } else if (thermostat.usage() === "medium-usage") {
+    } else if (thermostat.usage() === "Medium") {
       $('#temperature').css('color', 'black');
       $('#usage-meter').text(thermostat.usage());
-    } else if (thermostat.usage() === "low-usage") {
-      $('#temperature').css('color', 'green');
+    } else if (thermostat.usage() === "Low") {
+      $('#temperature').css('color', '#0C905D');
       $('#usage-meter').text(thermostat.usage());
     }
   });
@@ -49,14 +49,14 @@ $(document).ready(function() {
   $('#down').on('mouseup', function() {
     thermostat.down();
     $('#temperature').text(thermostat.temperature);
-    if(thermostat.usage() === "high-usage") {
-      $('#temperature').css('color', 'red');
+    if(thermostat.usage() === "High") {
+      $('#temperature').css('color', '#900C1E');
       $('#usage-meter').text(thermostat.usage());
-    } else if (thermostat.usage() === "medium-usage") {
+    } else if (thermostat.usage() === "Medium") {
       $('#temperature').css('color', 'black');
       $('#usage-meter').text(thermostat.usage());
-    } else if (thermostat.usage() === "low-usage") {
-      $('#temperature').css('color', 'green');
+    } else if (thermostat.usage() === "Low") {
+      $('#temperature').css('color', '#0C905D');
       $('#usage-meter').text(thermostat.usage());
     }
   });
