@@ -8,16 +8,19 @@ $(document).ready(function() {
 
   $('#usage').text(thermostat.usage());
 
-  $('#reset').text(thermostat.reset());
+  $('#reset').on('mouseup', function() {
+    thermostat.reset();
+    $('#temperature').text(thermostat.temperature);
+  });
 
   $('#up').on('mouseup', function() {
     thermostat.up();
     $('#temperature').text(thermostat.temperature);
-  })
+  });
 
 
   $('#down').on('mouseup', function() {
     thermostat.down();
     $('#temperature').text(thermostat.temperature);
-  })
+  });
 })
