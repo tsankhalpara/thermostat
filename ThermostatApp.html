@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Thermostat</title>
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Poiret+One|Roboto"
+     rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
     <script src="jQuery/jquery.min.js"></script>
     <script src="src/interface.js"></script>
     <h1>Thermostat</h1>
-    <h2> Temperature: <span id="temperature">20</span></h2>
+    <h2><span id="temperature">20</span></h2>
     <button type="button" id="up">UP</button>
     <button type="button" id="down">DOWN</button>
     <button type="button" id="reset">RESET</button>
@@ -16,8 +19,16 @@
     <button type="button" id="off">OFF</button>
     <p>
       Power saving mode is: <span id="power-saving-status">on</span><br>
-      Usage is: <span id="usage">low-usage</span>
+      Usage is: <span id="usage-meter">low-usage</span>
     </p>
+    <section>
+      <h1>Weather</h1>
+      <h3>Current temperature: <span id="current-temperature">20</span></h3>
+        <form id="select-city">
+          <input id="current-city" type="text" placeholder="Enter a city"></input>
+          <input type="submit"></input>
+        </form>
+      </section>
     <script src="src/Thermostat.js"></script>
   </body>
 </html>
